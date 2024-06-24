@@ -17,9 +17,8 @@ conda env create -f conda_env.yaml
 conda activate fnb_env
 ```
 You will also need to install two additional packages. First one is ```PyTorch```. Please choose according to your system specification. The second one is the ```LtU ILI``` package, which also offers installation options.
-```
 
 [ltu-ili.readthedocs.io](https://ltu-ili.readthedocs.io/en/latest/)
 [pytorch.org/get-started](https://pytorch.org/get-started/locally/)
-```
+
 Once all the external packages are installed, the program can be run using the configuration file named ``config_SBI_DM_FRB.ini``, where all parameters are stored and explained. Please refer to the jupyter notebook for an example of the whole setup.
