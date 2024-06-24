@@ -12,6 +12,7 @@ dependencies:
 
   - pip
   - pip:
+    - tqdm
     - glass
     - healpy
     - astropy
