@@ -3,7 +3,7 @@
 # Host model for dispersion contribution from FRB host galaxy
 # Two models available
 #   1. Lognormal
-#   2. Gaussian
+#   2. Gaussian (truncated at zero)
 
 import numpy as np
  
@@ -17,15 +17,6 @@ def lognormal_host_dm(z, exp_mu, sigma):
     ------------
     RETURNS:
         dm_host, del_mu, del_sigma (arrays): host_dm, partial derivatives wrt free parameters (median, scale)
-    ------------
-    We need the normal distribution values with "np.random.lognormal(log_mu, sigma, num_frbs)"
-    But the parameter log_mu != np.log(mu), rather they are related by the relation below,
-        mu = np.exp("log_mu" + 0.5*log_sigma**2)
-        log(mu) = log_mu + 0.5*log_sigma**2 , taking log on both sides
-        log_mu = log(mu) - 0.5*log_sigma**2
-    now the sample:
-        sample = np.random.normal(log_mu, log_sigma, num_frbs)
-        dm_host = np.exp(sample)
     -------------
     '''
     # print(exp_mu.to('cpu'), type(exp_mu))
@@ -48,7 +39,7 @@ def lognormal_host_dm(z, exp_mu, sigma):
 
 def gaussian_host_dm(z, mean_gauss, std_dev_gauss):
     '''
-    Samples DM_host from a Gaussian distribution
+    Samples DM_host from a truncated (at zero) Gaussian distribution
     ------------
     PARAMETERS:
         z (array): redshift of FRBs
