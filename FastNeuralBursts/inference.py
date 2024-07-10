@@ -104,7 +104,7 @@ class sbi_inference:
 			contour_color = '#2156c0'
 		g.triangle_plot(get_dist_sample, ['Cosmo_{scale}', 'DM_{host}', '\sigma'], 
 						filled=True,
-						legend_labels=[f"Algorithm: {package} \nNSIDE: {self.variables_dict['nside']} \nSim: {samples_arr.shape[0]}", 'Simulation 2'],
+						legend_labels=[f"Algorithm: {package} \nNSIDE: {self.variables_dict['nside']}", 'Simulation 2'],
 						line_args=[{'lw':1, 'color':contour_color},
 									{'lw':1, 'color':'#2156c0'}
 									], 
