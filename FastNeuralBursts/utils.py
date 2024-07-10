@@ -210,47 +210,6 @@ def read_catalogue(loc):
 
 
 
-# def assign_variable(file_path='config_SBI_DM_FRB.ini', verbose=False):
-#     '''
-#     Assigns variables from config file to their numerical values (as global parameters) and returns a dictionary.
-#     ------------
-#     PARAMETERS:
-#         file_path (string): config file path
-#         verbose (boolean): True: prints variables and numerical values
-#     ---------
-#     RETURNS:
-#         variables_dict (dictionary): dictionary from config file, 'keys': variables, 'value': values
-#     ---------
-#     '''
-#     config = configparser.ConfigParser()
-#     config.read(file_path)
-
-#     variables_dict = {}  # Dictionary to store variables
-
-#     for section in config.sections():
-#         named_tuple = collections.namedtuple(section, config.options(section))
-#         values = [config.get(section, option) for option in config.options(section)]
-
-#         try:
-#             float_values = [float(value) for value in values]
-#         except ValueError:
-#             print(values)
-#             float_values = values
-
-#         # Create an instance of the namedtuple with the values
-#         section_instance = named_tuple(*float_values)
-
-#         # Assign variables as globals
-#         for field in section_instance._fields:
-#             value = getattr(section_instance, field)
-#             variables_dict[field] = value
-#             if verbose:
-#                 print(f'{field} = {value}')
-#             globals()[field] = value
-
-#     return variables_dict
-
-
 import configparser
 import collections
 
