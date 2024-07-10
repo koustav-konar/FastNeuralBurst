@@ -24,15 +24,6 @@ dependencies:
     - camb
     - SWIG
 
-# User should decide which architecture to use 
-# (https://ltu-ili.readthedocs.io/en/latest/install.html)
 # - torch
 # - ili
-
-# HMcode doesn't install at first, but if I comment it out and run 'pip install hmcode' after creating the environment, it works
-# - pyhmcode
-
-# How should I include the Levin module? Is there an option to include your environment file into this? 
-# Or should I write down the explicit instructions in the readme.md file?
-# - levinpower
   
