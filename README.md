@@ -14,7 +14,7 @@ Then, navigate to the cloned directory
 ```shell
 cd FastNeuralBurst
 conda env create -f conda_env.yaml
-conda activate fnb_env
+conda activate frb_env
 ```
 You will also need to install two additional packages. First one is ```PyTorch``` [pytorch.org/get-started](https://pytorch.org/get-started/locally/). Please choose according to your system specification. The second one is the ```LtU ILI``` [ltu-ili.readthedocs.io](https://ltu-ili.readthedocs.io/en/latest/) package, which also offers installation options.
 
