@@ -1,4 +1,4 @@
-name: fnb_env
+name: frb_env
 channels:
   - conda-forge
   - defaults
