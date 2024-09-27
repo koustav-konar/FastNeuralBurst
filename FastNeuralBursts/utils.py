@@ -209,13 +209,6 @@ def read_catalogue(loc):
     return z_frb, dm_from_catalogue, dm_milky_way, frb_name, frb_name_label, phi_radians, theta_radians
 
 
-
-import configparser
-import collections
-
-import configparser
-import collections
-
 def assign_variable(file_path='config_SBI_DM_FRB.ini', verbose=False):
     '''
     Assigns variables from the config file to their numerical values (as global parameters) and returns a dictionary.
